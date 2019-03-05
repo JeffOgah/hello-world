@@ -1,18 +1,24 @@
-<!DOCTYPE html> 
-<html>
-    <head>
-        <title>JEFF's BLOG</title>
-    </head>
-    <body>
-        <div>
-            <h1><a href="/">JEFF's BLOG</a></h2>
-        </div>
-        {% for post in posts %}
-            <div>
-                <p>published: {{ post.published_date }}</p>
-                <h2><a href="">{{ post.title }}</a></h2>
-                <p>{{ post.text|linebreaksbr }}</p>
+{% extends 'mysite/base.html' %}
+
+{% block content %}
+    <div class="row">
+    {% for post in posts %}
+        <div class="col-md-4 my-4">
+            <a class="posts" style="text-decoration: none;" href="{% url 'post_detail' pk=post.pk %}">
+            <div class="card post-list"> 
+                <div class="card-header text-center">
+                    <h2>{{ post.title }}</h2>
+                </div>
+                <div class="card-body">
+                    <p class="post-text">{{ post.text|linebreaksbr }}</p>
+                </div>
+                <div class="date card-footer">
+                    {{ post.published_date }}
+                </div>
             </div>
-        {% endfor %}
-    </body>
-</html>
+            </a>
+            
+        </div>
+    {% endfor %}
+    </div>
+{% endblock %}

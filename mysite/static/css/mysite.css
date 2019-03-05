@@ -1,0 +1,54 @@
+body {
+    background-color: white;
+}
+.page-header {
+    padding: 1em;
+    background-color: rgb(43, 9, 53);
+}
+.title{
+    color: white;
+}
+p {
+    color: black;
+}
+.my-btn {
+    margin: 1em auto;
+}
+.container {
+    position:relative;
+    min-height: 100vh;
+}
+.card-header, .card-footer {
+    background-color: rgb(43, 9, 53);
+    color: white;
+}
+.page-footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    font-size: 1.5em;
+    background-color: rgb(43, 9, 53);
+    color: white; 
+}
+.fa-free-code-camp:hover {
+      color: green;
+}
+.fa-github:hover {
+    color: purple;
+}
+.fa-twitter:hover {
+    color: #1da1f2;
+}
+.fa-facebook-official:hover {
+    color: #3b5998;
+}
+.post-list {
+    border-radius: 10px;
+    border: none;
+    text-decoration: none;
+}
+.btn-dark:hover {
+    background-color: rgb(5, 5, 189);
+}
